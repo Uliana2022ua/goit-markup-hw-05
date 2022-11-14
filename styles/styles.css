@@ -259,6 +259,7 @@ nav {
   scale: 0.5;
   pointer-events: none;
 }
+
 /* .is-hidden { 
   visibility: hidden;
   opacity: 0;
@@ -277,7 +278,7 @@ nav {
   transform: translate(-50%, -50%);
   padding: 15px;
   opacity: 1;
-  
+
 }
 
 
@@ -293,6 +294,7 @@ nav {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--third-color);
+  cursor: pointer;
 }
 
 /*About description*/
@@ -380,7 +382,7 @@ nav {
   position: relative;
 }
 
- .development-overlay {
+.development-overlay {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -748,10 +750,9 @@ a {
   overflow: hidden;
 }
 
-.project-overlay {
+.overlay-text {
   display: flex;
-  padding: 24px;
-  align-items: center;
+  padding: 63px 24px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -760,18 +761,13 @@ a {
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-overlay>p {
-  margin: 0;
-  padding: 0;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: var(--third-color);
 }
 
-.card:hover .project-overlay,
-.card:focus .project-overlay {
+.card:hover .overlay-text,
+.card:focus .overlay-text {
   transform: translateY(0%);
 }
